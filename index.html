@@ -1,163 +1,108 @@
 <!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ulang Tahun Bunga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- FONT SEBELUMNYA (Great Vibes + Poppins) -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #ffe6f0;
       overflow-x: hidden;
     }section {
-  padding: 60px 20px;
-  text-align: center;
   min-height: 100vh;
-}
-
-.start-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: #ffd1dc;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  transition: opacity 1s ease;
 }
 
 h1 {
-  font-size: 2.5em;
-  color: #d6336c;
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
   margin-bottom: 20px;
+  color: #ff3399;
 }
 
-.btn {
-  padding: 10px 20px;
-  font-size: 1.2em;
-  background-color: #ff69b4;
+p {
+  font-size: 1rem;
+  max-width: 600px;
+  line-height: 1.8;
+  color: #333;
+}
+
+button {
+  margin-top: 40px;
+  background-color: #ff5ca2;
   color: white;
+  padding: 12px 24px;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #ff1493;
+button:hover {
+  background-color: #e6488f;
 }
 
 .hidden {
   display: none;
 }
 
-.text-section, .gallery-section, .closing-section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
+.photo {
+  margin-bottom: 30px;
 }
 
-.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
-}
-
-.gallery img {
-  max-width: 300px;
-  width: 80%;
+.photo img {
+  width: 200px;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  animation: fadeInUp 1s ease forwards;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.love {
-  position: fixed;
-  top: -50px;
-  font-size: 20px;
-  color: #ffb6c1;
-  animation: fall 6s linear infinite;
-  pointer-events: none;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(110vh);
-    opacity: 0;
-  }
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
 }
 
   </style>
 </head>
 <body>
-  <div class="start-section" id="start">
+  <section id="intro" class="centered">
     <h1>Happy Birthday Pacarku!</h1>
-    <button class="btn" onclick="showSection('text')">Lanjutkan</button>
-  </div>  <section class="text-section hidden" id="text">
-    <p style="font-size: 1.2em; max-width: 700px; margin: auto;">
-      Hii sayang kuuu Bunga Khanza Fakhira Sahrani (if I say that incorrectly I'm so so sorry) HAPPY BIRTHDAY SAYANGG YANG KE 15 KAN??? WUIT UDH GEDEEEE brrh tapi tetep ukti yahh HAHAHAHAHAHA CONGRATS UDH MASUK SMA UDH BUKAN ANAK KECIL LAGI... tapi kalo udh bukan anak kecil masak jangan gosong lagi yaa wwwuuuuuww, aku doa ini semoga kamu sehat selaluu panjang umurr dan selalu cantik yaa fakhira kira wish kamu untuk ulang tahun ini apa yaa??? TERIMA KASIH SUDAH MENJADII PACAR TERBAIK KU SELAMA INIII I LOVE U MORE THAN ANYTHING SAYANGGGG terimakasih juga sudah sabar ke akuu HEHEHEHE maaf yaaaaaa beribu maaf untuk kmuuu dan beribu sayang juga untuk kamu, HAPPY BIRTHDAY SAYANG!!! WISH U ALL THE BEST!!
-    </p>
-    <br>
-    <button class="btn" onclick="showSection('gallery')">Lanjut ke foto kenangan ➡️</button>
-  </section>  <section class="gallery-section hidden" id="gallery">
-    <h2>Beberapa Kenangan yang Sudah Kita Lalui</h2>
-    <div class="gallery">
-      <div><img src="foto1.jpg" alt="anak kesayangan kamu"><p>INI ANAK KESAYANGAN KAMUU AL</p></div>
-      <div><img src="foto2.jpg" alt="anak kesayangan aku"><p>kalo ini anak kesayangan akuu HEHEHEH</p></div>
-      <div><img src="foto3.jpg" alt="boneka besar"><p>NAH INI BONEKA YANG PALING GEDEK PUNYA KAMU</p></div>
-      <div><img src="foto4.jpg" alt="pingu pertama kali"><p>KALOO INI KETIKA PERTAMA KALI KAMU BELI PINGU</p></div>
-      <div><img src="foto5.jpg" alt="prank"><p>ketika kamu ngprank aku (tapi aku udh tau si kocak)</p></div>
-      <div><img src="foto6.jpg" alt="baking"><p>WAKTU KAMU BAKING!!! huwaa i wish i can taste ur cooking</p></div>
-      <div><img src="foto7.jpg" alt="piko"><p>KETIKA KAMU BIKIN BAJU BUAT PIKO</p></div>
-    </div>
-    <br>
-    <button class="btn" onclick="showSection('closing')">Lanjut ke kata penutup ➡️</button>
-  </section>  <section class="closing-section hidden" id="closing">
-    <h2>Happy Birthday Sayang Kuu 🤍</h2>
-    <p style="font-size: 1.2em; max-width: 700px; margin: auto;">
-      Wish u all the best!! Semoga kita selalu bersama ya!! Sampai tua!! 🤍
-    </p>
+    <button onclick="showSection('message')">Lanjutkan ➜</button>
+  </section>  <section id="message" class="hidden">
+    <p>Hii sayang kuuu Bunga Khanza Fakhira Sahrani!!! Happy birthday yang ke-15 yaaa 😚. Wuuuu udah gede banget kamu, udah masuk SMA! Aku bangga banget sama kamu. Doaku untukmu: semoga panjang umur, sehat selalu, makin cantik, dan kita bisa terus bareng-bareng sampai tua nanti 🥺❤️. Terima kasih sudah jadi pacar terbaikku, I love u more than anything. Happy birthday sayang! Wish u all the best!</p>
+    <button onclick="showSection('photos')">Lanjut ke galeri ➜</button>
+  </section>  <section id="photos" class="hidden">
+    <h2>Beberapa Kenangan Kita </h2>
+    <div class="photo"><img src="foto1.jpg" alt="anak kesayangan kamu"><p>INI ANAK KESAYANGAN KAMU AL</p></div>
+    <div class="photo"><img src="foto2.jpg" alt="anak kesayangan aku"><p>kalo ini anak kesayangan akuu HEHEHEH</p></div>
+    <div class="photo"><img src="foto3.jpg" alt="boneka besar"><p>NAH INI BONEKA YANG PALING GEDEK PUNYA KAMU</p></div>
+    <div class="photo"><img src="foto4.jpg" alt="pingu pertama kali"><p>KALOO INI KETIKA PERTAMA KALI KAMU BELI PINGU</p></div>
+    <div class="photo"><img src="foto5.jpg" alt="prank"><p>ketika kamu ngprank aku (tapi aku udh tau si kocak)</p></div>
+    <div class="photo"><img src="foto6.jpg" alt="baking"><p>WAKTU KAMU BAKING!!! huwaa i wish i can taste ur cooking</p></div>
+    <div class="photo"><img src="foto7.jpg" alt="piko"><p>KETIKA KAMU BIKIN BAJU BUAT PIKO</p></div>
+    <button onclick="showSection('ending')">Lanjut ke kata penutup ➜</button>
+  </section>  <section id="ending" class="hidden">
+    <h2>Penutup</h2>
+    <p>Happy birthday sayang kuu 🤍 Wish u all the best!! Semoga kita selalu bersama ya!! Sampai tua!!</p>
   </section>  <script>
     function showSection(id) {
-      const sections = ['start', 'text', 'gallery', 'closing'];
-      sections.forEach(section => {
-        const el = document.getElementById(section);
-        if (section === id) {
-          el.classList.remove('hidden');
-          setTimeout(() => el.classList.add('visible'), 50);
-        } else {
-          el.classList.add('hidden');
-          el.classList.remove('visible');
-        }
-      });
+      document.querySelectorAll('section').forEach(sec => sec.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
     }
-
-    // Love animation (light)
-    function createLove() {
-      const love = document.createElement('div');
-      love.classList.add('love');
-      love.style.left = Math.random() * 100 + 'vw';
-      love.style.animationDuration = (4 + Math.random() * 3) + 's';
-      love.innerText = '🤍';
-      document.body.appendChild(love);
-      setTimeout(() => {
-        love.remove();
-      }, 7000);
-    }
-    setInterval(createLove, 2000);
   </script></body>
 </html>
