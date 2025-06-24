@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -11,115 +10,103 @@
       font-family: 'Poppins', sans-serif;
       background-color: #ffe6f0;
       overflow-x: hidden;
-    }
+    }section {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px 80px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  overflow-y: auto;
+  transition: opacity 1s ease;
+}
 
-    section {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      text-align: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 1s ease;
-    }
+section.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+}
 
-    section.active {
-      opacity: 1;
-      pointer-events: auto;
-      z-index: 1;
-    }
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ff3399;
+}
 
-    h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #ff3399;
-    }
+h2 {
+  font-size: 2rem;
+  color: #e91e63;
+}
 
-    h2 {
-      font-size: 2rem;
-      color: #e91e63;
-    }
+p {
+  font-size: 1rem;
+  max-width: 700px;
+  line-height: 1.8;
+  color: #333;
+}
 
-    p {
-      font-size: 1rem;
-      max-width: 700px;
-      line-height: 1.8;
-      color: #333;
-    }
+button {
+  margin-top: 40px;
+  background-color: #ff5ca2;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
-    button {
-      margin-top: 40px;
-      background-color: #ff5ca2;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 12px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
+button:hover {
+  background-color: #e6488f;
+}
 
-    button:hover {
-      background-color: #e6488f;
-    }
+.photo {
+  margin-bottom: 30px;
+}
 
-    .photo {
-      margin-bottom: 30px;
-    }
+.photo img {
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
-    .photo img {
-      width: 200px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
+.love {
+  position: fixed;
+  top: -30px;
+  font-size: 20px;
+  color: #ff99cc;
+  animation: fall 6s linear infinite;
+  pointer-events: none;
+  z-index: 9999;
+}
 
-    .love {
-      position: fixed;
-      top: -30px;
-      font-size: 20px;
-      color: #ff99cc;
-      animation: fall 6s linear infinite;
-      pointer-events: none;
-      z-index: 9999;
-    }
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
 
-    @keyframes fall {
-      to {
-        transform: translateY(110vh);
-        opacity: 0;
-      }
-    }
   </style>
 </head>
-<body>
-
-  <!-- Musik autoplay -->
-  <audio autoplay loop hidden>
+<body>  <audio autoplay loop hidden>
     <source src="music.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
-  </audio>
-
-  <!-- Halaman 1 -->
-  <section id="section1" class="active">
+  </audio>  <section id="section1" class="active">
     <h1>Happy Birthday Pacarku!</h1>
     <button onclick="showSection('section2')">Lanjutkan ➜</button>
-  </section>
-
-  <!-- Halaman 2 - Kata Kata -->
-  <section id="section2">
+  </section>  <section id="section2">
     <p>
       HII SAYANG KUUU BUNGA KHANZA FAKHIRA SAHRANI (if i say that uncorretly im so so sorry) HAPPY BIRTHDAY SAYANGG YANG KE 15 KAN???? WIIII UDH GEDEEEEE, bntr lagi jadi utas yaaaa HAHAHAHAHHA CONGRATS UDH MASUK SMA UDH BUKAN ANAK KECIL LAGII,, tapi kalo udh bukan anak kecil masak jangan gosong lagi yaa wuwuuwuwuw, aku doa ini semoga kamu sehat selaluu panjang umur dan selalu cantik yapp kira kira wish kamu untuk ultah tahun ini apa yaa??? TERIMA KASIH SUDAH MENJADII PACAR TERBAIK KUU SELAMA INIIII I LOVE U MORE THAN ANYTHING SAYANGGG terimakasih juga sudah sabar ke akuu HEHEHEHE maaf yaaaaaa beribu maaf untuk kmuuu dan beribu sayang juga untuk kamu, HAPPY BIRTHDAY SAYANG!!! WISH U ALL THE BEST!!
     </p>
     <button onclick="showSection('section3')">Lanjut ke galeri ➜</button>
-  </section>
-
-  <!-- Halaman 3 - Galeri -->
-  <section id="section3">
+  </section>  <section id="section3">
     <h2>Beberapa Kenangan yang Sudah Kita Lalui</h2>
     <div class="photo"><img src="foto1.jpg"><p>INI ANAK KESAYANGAN KAMUU AL</p></div>
     <div class="photo"><img src="foto2.jpg"><p>kalo ini anak kesayangan akuu HEHEHEH</p></div>
@@ -129,21 +116,14 @@
     <div class="photo"><img src="foto6.jpg"><p>WAKTU KAMU BAKING!!! huwaa i wish i can taste ur cooking</p></div>
     <div class="photo"><img src="foto7.jpg"><p>KETIKA KAMU BIKIN BAJU BUAT PIKO</p></div>
     <button onclick="showSection('section4')">Lanjut ke kata penutup ➜</button>
-  </section>
-
-  <!-- Halaman 4 - Penutup -->
-  <section id="section4">
+  </section>  <section id="section4">
     <h2>Happy Birthday Sayang Kuu 🤍</h2>
     <p>Wish u all the best!! Semoga kita selalu bersama ya!! Sampai tua!! 🤍</p>
-  </section>
-
-  <!-- Script untuk navigasi dan animasi love -->
-  <script>
+  </section>  <script>
     function showSection(id) {
       const sections = document.querySelectorAll('section');
       sections.forEach(section => section.classList.remove('active'));
-      const next = document.getElementById(id);
-      next.classList.add('active');
+      document.getElementById(id).classList.add('active');
     }
 
     function createLove() {
@@ -156,6 +136,5 @@
       setTimeout(() => love.remove(), 7000);
     }
     setInterval(createLove, 1200);
-  </script>
-</body>
+  </script></body>
 </html>
