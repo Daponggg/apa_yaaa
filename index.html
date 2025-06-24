@@ -1,11 +1,9 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ulang Tahun Bunga</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- FONT SEBELUMNYA (Great Vibes + Poppins) -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -13,96 +11,107 @@
       font-family: 'Poppins', sans-serif;
       background-color: #ffe6f0;
       overflow-x: hidden;
-    }section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  text-align: center;
-  transition: opacity 1s ease;
-}
+    }
 
-h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: #ff3399;
-}
+    section {
+      min-height: 100vh;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+      transition: opacity 1s ease;
+    }
 
-p {
-  font-size: 1rem;
-  max-width: 600px;
-  line-height: 1.8;
-  color: #333;
-}
+    section.active {
+      display: flex;
+    }
 
-button {
-  margin-top: 40px;
-  background-color: #ff5ca2;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 12px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff3399;
+    }
 
-button:hover {
-  background-color: #e6488f;
-}
+    h2 {
+      font-size: 2rem;
+      color: #e91e63;
+    }
 
-.hidden {
-  display: none;
-}
+    p {
+      font-size: 1rem;
+      max-width: 700px;
+      line-height: 1.8;
+      color: #333;
+    }
 
-.photo {
-  margin-bottom: 30px;
-}
+    button {
+      margin-top: 40px;
+      background-color: #ff5ca2;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
 
-.photo img {
-  width: 200px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
+    button:hover {
+      background-color: #e6488f;
+    }
 
-.centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
-  text-align: center;
-}
+    .photo {
+      margin-bottom: 30px;
+    }
 
+    .photo img {
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body>
-  <section id="intro" class="centered">
+
+  <section id="section1" class="active">
     <h1>Happy Birthday Pacarku!</h1>
-    <button onclick="showSection('message')">Lanjutkan ➜</button>
-  </section>  <section id="message" class="hidden">
+    <button onclick="showSection('section2')">Lanjutkan ➜</button>
+  </section>
+
+  <section id="section2">
     <p>Hii sayang kuuu Bunga Khanza Fakhira Sahrani!!! Happy birthday yang ke-15 yaaa 😚. Wuuuu udah gede banget kamu, udah masuk SMA! Aku bangga banget sama kamu. Doaku untukmu: semoga panjang umur, sehat selalu, makin cantik, dan kita bisa terus bareng-bareng sampai tua nanti 🥺❤️. Terima kasih sudah jadi pacar terbaikku, I love u more than anything. Happy birthday sayang! Wish u all the best!</p>
-    <button onclick="showSection('photos')">Lanjut ke galeri ➜</button>
-  </section>  <section id="photos" class="hidden">
-    <h2>Beberapa Kenangan Kita </h2>
-    <div class="photo"><img src="foto1.jpg" alt="anak kesayangan kamu"><p>INI ANAK KESAYANGAN KAMU AL</p></div>
-    <div class="photo"><img src="foto2.jpg" alt="anak kesayangan aku"><p>kalo ini anak kesayangan akuu HEHEHEH</p></div>
-    <div class="photo"><img src="foto3.jpg" alt="boneka besar"><p>NAH INI BONEKA YANG PALING GEDEK PUNYA KAMU</p></div>
-    <div class="photo"><img src="foto4.jpg" alt="pingu pertama kali"><p>KALOO INI KETIKA PERTAMA KALI KAMU BELI PINGU</p></div>
-    <div class="photo"><img src="foto5.jpg" alt="prank"><p>ketika kamu ngprank aku (tapi aku udh tau si kocak)</p></div>
-    <div class="photo"><img src="foto6.jpg" alt="baking"><p>WAKTU KAMU BAKING!!! huwaa i wish i can taste ur cooking</p></div>
-    <div class="photo"><img src="foto7.jpg" alt="piko"><p>KETIKA KAMU BIKIN BAJU BUAT PIKO</p></div>
-    <button onclick="showSection('ending')">Lanjut ke kata penutup ➜</button>
-  </section>  <section id="ending" class="hidden">
-    <h2>Penutup</h2>
-    <p>Happy birthday sayang kuu 🤍 Wish u all the best!! Semoga kita selalu bersama ya!! Sampai tua!!</p>
-  </section>  <script>
+    <button onclick="showSection('section3')">Lanjut ke galeri ➜</button>
+  </section>
+
+  <section id="section3">
+    <h2>Beberapa Kenangan yang Sudah Kita Lalui</h2>
+    <div class="photo"><img src="foto1.jpg"><p>INI ANAK KESAYANGAN KAMUU AL</p></div>
+    <div class="photo"><img src="foto2.jpg"><p>kalo ini anak kesayangan akuu HEHEHEH</p></div>
+    <div class="photo"><img src="foto3.jpg"><p>NAH INI BONEKA YANG PALING GEDEK PUNYA KAMU</p></div>
+    <div class="photo"><img src="foto4.jpg"><p>KALOO INI KETIKA PERTAMA KALI KAMU BELI PINGU</p></div>
+    <div class="photo"><img src="foto5.jpg"><p>ketika kamu ngprank aku (tapi aku udh tau si kocak)</p></div>
+    <div class="photo"><img src="foto6.jpg"><p>WAKTU KAMU BAKING!!! huwaa i wish i can taste ur cooking</p></div>
+    <div class="photo"><img src="foto7.jpg"><p>KETIKA KAMU BIKIN BAJU BUAT PIKO</p></div>
+    <button onclick="showSection('section4')">Lanjut ke kata penutup ➜</button>
+  </section>
+
+  <section id="section4">
+    <h2>Happy Birthday Sayang Kuu 🤍</h2>
+    <p>Wish u all the best!! Semoga kita selalu bersama ya!! Sampai tua!! 🤍</p>
+  </section>
+
+  <script>
     function showSection(id) {
-      document.querySelectorAll('section').forEach(sec => sec.classList.add('hidden'));
-      document.getElementById(id).classList.remove('hidden');
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
     }
-  </script></body>
+  </script>
+
+</body>
 </html>
