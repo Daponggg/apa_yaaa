@@ -1,157 +1,127 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ulang Tahun Bunga</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <title>Happy Birthday Bunga!</title>
   <style>
     body {
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #ffe6f0;
+      background: #ffe9f3;
       color: #333;
-      text-align: center;
       overflow-x: hidden;
     }
 
-    .section {
+    section {
       padding: 40px 20px;
+      text-align: center;
+    }
+
+    .hidden {
       display: none;
     }
 
-    .active {
-      display: block;
-    }
-
     h1 {
-      color: #d63384;
-      font-size: 2.5rem;
+      font-size: 2em;
+      color: #e91e63;
+      margin-bottom: 10px;
     }
 
-    .btn {
-      background-color: #ff80aa;
+    button {
+      background-color: #e91e63;
       color: white;
       border: none;
-      padding: 12px 24px;
-      border-radius: 10px;
+      padding: 10px 25px;
+      font-size: 1em;
+      border-radius: 8px;
       cursor: pointer;
-      font-size: 1rem;
-      margin-top: 30px;
-      transition: 0.3s;
+      margin-top: 20px;
+      transition: background 0.3s ease;
     }
 
-    .btn:hover {
-      background-color: #e65c94;
+    button:hover {
+      background-color: #d81b60;
     }
 
-    .gallery {
+    .photo-container {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
 
-    .gallery-item {
+    .photo-container img {
+      width: 200px;
+      height: auto;
+      border-radius: 15px;
       opacity: 0;
-      transform: translateY(50px) blur(5px);
-      animation: fadeUp 0.8s ease forwards;
+      transform: translateY(30px) blur(10px);
+      animation: fadeInUp 1s ease forwards;
     }
 
-    @keyframes fadeUp {
+    @keyframes fadeInUp {
       to {
         opacity: 1;
         transform: translateY(0) blur(0);
       }
     }
 
-    img {
-      width: 260px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .caption {
-      margin-top: 10px;
-      font-style: italic;
+    .final-message {
+      font-size: 1.3em;
+      color: #e91e63;
+      font-weight: bold;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
 
-  <!-- SECTION 1 -->
-  <div class="section active" id="section1">
+  <!-- Section 1: Greeting -->
+  <section id="greeting">
     <h1>Happy Birthday Bunga Khanza Fakhira Sahrani 🎂</h1>
-    <p style="max-width: 600px; margin: auto; font-size: 1.1rem;">
-      HII SAYANG KUUU BUNGA KHANZA FAKHIRA SAHRANI (if I say that uncorrectly I’m so so sorry) HAPPY BIRTHDAY SAYANGG YANG KE 15 KAN???? WIIII UDH GEDEEEEE, bntar lagi jadi utas yaaaa HAHAHAHAHA CONGRATS UDH MASUK SMA UDH BUKAN ANAK KECIL LAGI... tapi kalo udh bukan anak kecil masak jangan gosong lagi yaa wuwuwuwuwu, aku doa ini semoga kamu sehat selaluu panjang umur dan selalu cantik yapp kira kira wish kamu untuk ultah tahun ini apa yaa???
-      <br><br>
-      TERIMA KASIH SUDAH MENJADII PACAR TERBAIK KUU SELAMA INIIII I LOVE U MORE THAN ANYTHING SAYANGGG terimakasih juga sudah sabar ke akuu HEHEHEHE maaf yaaaaaa beribu maaf untuk kmuuu dan beribu sayang juga untuk kamu, HAPPY BIRTHDAY SAYANG!!! WISH U ALL THE BEST!!
+    <p>
+      Hii sayang kuu!! HAPPY BIRTHDAY SAYANGG YANG KE 15 KAN??? WUHH UDA GEDEEEE...  
+      hahahaha congrats udah masuk SMA yaa!!  
+      Terima kasih sudah jadi pacar terbaik kuu selama iniii, i love u more than anything 💖  
+      Maaf yaaa beribu maaf untuk kmuuu dan beribu sayang juga untuk kamu!  
     </p>
-    <button class="btn" onclick="goToSection('section2')">Lanjutkan ➜</button>
-  </div>
+    <button onclick="nextSection()">Lanjutkan</button>
+  </section>
 
-  <!-- SECTION 2 - FOTO -->
-  <div class="section" id="section2">
-    <h2>Beberapa Kenangan yang Sudah Kita Laluii</h2>
-    <div class="gallery">
-      <div class="gallery-item" style="animation-delay: 0.1s">
-        <img src="assets/foto1.jpg" alt="anak kesayangan kamu">
-        <div class="caption">INI ANAK KESAYANGAN KAMUU AL</div>
-      </div>
-      <div class="gallery-item" style="animation-delay: 0.2s">
-        <img src="assets/foto2.jpg" alt="anak kesayangan aku">
-        <div class="caption">kalo ini anak kesayangan akuu HEHEHEH</div>
-      </div>
-      <div class="gallery-item" style="animation-delay: 0.3s">
-        <img src="assets/foto3.jpg" alt="boneka besar">
-        <div class="caption">NAH INI BONEKA YANG PALING GEDEK PUNYA KAMU</div>
-      </div>
-      <div class="gallery-item" style="animation-delay: 0.4s">
-        <img src="assets/foto4.jpg" alt="pingu pertama kali">
-        <div class="caption">KALOO INI KETIKA PERTAMA KALI KAMU BELI PINGU</div>
-      </div>
-      <div class="gallery-item" style="animation-delay: 0.5s">
-        <img src="assets/foto5.jpg" alt="prank">
-        <div class="caption">ketika kamu ngprank aku (tapi aku udh tau si kocak)</div>
-      </div>
-      <div class="gallery-item" style="animation-delay: 0.6s">
-        <img src="assets/foto6.jpg" alt="baking">
-        <div class="caption">WAKTU KAMU BAKING!!! huwaa i wish i can taste ur cooking</div>
-      </div>
-      <div class="gallery-item" style="animation-delay: 0.7s">
-        <img src="assets/foto7.jpg" alt="piko">
-        <div class="caption">KETIKA KAMU BIKIN BAJU BUAT PIKO</div>
-      </div>
-      <div class="gallery-item" style="animation-delay: 0.8s">
-        <img src="assets/foto8.jpg" alt="mabar ml">
-        <div class="caption">Ketika akhirnya kita mabar ml hehe</div>
-      </div>
+  <!-- Section 2: Photos -->
+  <section id="photos" class="hidden">
+    <div class="photo-container">
+      <img src="foto1.jpg" style="animation-delay: 0s;" />
+      <img src="foto2.jpg" style="animation-delay: 0.2s;" />
+      <img src="foto3.jpg" style="animation-delay: 0.4s;" />
+      <img src="foto4.jpg" style="animation-delay: 0.6s;" />
+      <img src="foto5.jpg" style="animation-delay: 0.8s;" />
+      <img src="foto6.jpg" style="animation-delay: 1s;" />
+      <img src="foto7.jpg" style="animation-delay: 1.2s;" />
     </div>
-    <button class="btn" onclick="goToSection('section3')">Lanjut ke kata penutup ➜</button>
-  </div>
+    <button onclick="showFinal()">Lanjut ke Penutup</button>
+  </section>
 
-  <!-- SECTION 3 - PENUTUP -->
-  <div class="section" id="section3">
-    <h2>🎉 Happy Birthday Sayang Kuu 🎉</h2>
-    <p style="max-width: 600px; margin: auto; font-size: 1.2rem;">
-      Wish u all the best!! Semoga kita selalu bersama ya!! Sampai tua!! 🥹❤️
+  <!-- Section 3: Final message -->
+  <section id="final" class="hidden">
+    <p class="final-message">
+      Happy birthday sayang kuu!! Wish u all the best!!  
+      Semoga kita selalu bersama ya!! Sampai tua!! 💞💞💞
     </p>
-  </div>
+  </section>
 
   <script>
-    function goToSection(id) {
-      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
+    function nextSection() {
+      document.getElementById("greeting").classList.add("hidden");
+      document.getElementById("photos").classList.remove("hidden");
     }
 
-    // Jalankan animasi delay untuk setiap .gallery-item
-    document.addEventListener("DOMContentLoaded", () => {
-      const items = document.querySelectorAll(".gallery-item");
-      items.forEach((item, index) => {
-        item.style.animationDelay = (index * 0.2) + "s";
-      });
-    });
+    function showFinal() {
+      document.getElementById("photos").classList.add("hidden");
+      document.getElementById("final").classList.remove("hidden");
+    }
   </script>
+
 </body>
 </html>
