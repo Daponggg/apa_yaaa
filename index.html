@@ -1,127 +1,161 @@
-      <!DOCTYPE html>
-<html lang="id">
+      <!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Birthday Bunga!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ulang Tahun Bunga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+    * {
       margin: 0;
-      background: #ffe9f3;
-      color: #333;
-      overflow-x: hidden;
-    }
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }body {
+  background-color: #ffddee;
+  overflow-x: hidden;
+}
 
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
+.section {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
-    .hidden {
-      display: none;
-    }
+h1, h2 {
+  font-family: 'Pacifico', cursive;
+  color: #d63384;
+  margin-bottom: 20px;
+}
 
-    h1 {
-      font-size: 2em;
-      color: #e91e63;
-      margin-bottom: 10px;
-    }
+h2 {
+  font-size: 2.2em;
+  font-family: 'Poppins', sans-serif;
+}
 
-    button {
-      background-color: #e91e63;
-      color: white;
-      border: none;
-      padding: 10px 25px;
-      font-size: 1em;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: background 0.3s ease;
-    }
+p {
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #333;
+}
 
-    button:hover {
-      background-color: #d81b60;
-    }
+button {
+  margin-top: 40px;
+  background-color: #ff69b4;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
 
-    .photo-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
+button:hover {
+  transform: scale(1.05);
+}
 
-    .photo-container img {
-      width: 200px;
-      height: auto;
-      border-radius: 15px;
-      opacity: 0;
-      transform: translateY(30px) blur(10px);
-      animation: fadeInUp 1s ease forwards;
-    }
+.hidden {
+  display: none;
+}
 
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0) blur(0);
-      }
-    }
+.kenangan img {
+  width: 80px;
+  height: auto;
+  margin: 12px 0 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(60px);
+  opacity: 0;
+  transition: all 1s ease;
+}
 
-    .final-message {
-      font-size: 1.3em;
-      color: #e91e63;
-      font-weight: bold;
-      margin-top: 30px;
-    }
+.kenangan img.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.leci {
+  position: fixed;
+  top: -50px;
+  width: 30px;
+  height: 30px;
+  background-image: url('https://emojicdn.elk.sh/🍒');
+  background-size: cover;
+  animation: fall 5s linear infinite;
+  z-index: 10;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
   </style>
 </head>
 <body>
+  <div class="section" id="halaman1">
+    <h1>Happy Birthday Pacarku!</h1>
+    <button onclick="lanjut('halaman2')">Lanjutkan ➜</button>
+  </div>  <div class="section hidden" id="halaman2">
+    <h2>HI SAYANG KUUU BUNGA KHANZA FAKHIRA SAHRANI 🥰</h2>
+    <p>HAPPY BIRTHDAY SAYANGG YANG KE 15 KAN??? WIII UDA GEDEEEE 😭😭 font lagi udah victs yaaaa HAHAHAHAHAHA CONGRATS UDH MASUK SMA UDH BUKAN ANAK KECIL LAGI...</p>
+    <button onclick="lanjut('halaman3')">Lanjut ke kenangan ➜</button>
+  </div>  <div class="section hidden" id="halaman3">
+    <h2>Beberapa Kenangan yang Sudah Kita Laluii</h2>
+    <div class="kenangan">
+      <img src="assets/foto1.jpg" alt="anak kesayangan kamu" />
+      <p>INI ANAK KESAYANGAN KAMUU AL</p><img src="assets/foto2.jpg" alt="anak kesayangan aku" />
+  <p>kalo ini anak kesayangan akuu HEHEHEH</p>
 
-  <!-- Section 1: Greeting -->
-  <section id="greeting">
-    <h1>Happy Birthday Bunga Khanza Fakhira Sahrani 🎂</h1>
-    <p>
-      Hii sayang kuu!! HAPPY BIRTHDAY SAYANGG YANG KE 15 KAN??? WUHH UDA GEDEEEE...  
-      hahahaha congrats udah masuk SMA yaa!!  
-      Terima kasih sudah jadi pacar terbaik kuu selama iniii, i love u more than anything 💖  
-      Maaf yaaa beribu maaf untuk kmuuu dan beribu sayang juga untuk kamu!  
-    </p>
-    <button onclick="nextSection()">Lanjutkan</button>
-  </section>
+  <img src="assets/foto3.jpg" alt="boneka besar" />
+  <p>NAH INI BONEKA YANG PALING GEDEK PUNYA KAMU</p>
 
-  <!-- Section 2: Photos -->
-  <section id="photos" class="hidden">
-    <div class="photo-container">
-      <img src="foto1.jpg" style="animation-delay: 0s;" />
-      <img src="foto2.jpg" style="animation-delay: 0.2s;" />
-      <img src="foto3.jpg" style="animation-delay: 0.4s;" />
-      <img src="foto4.jpg" style="animation-delay: 0.6s;" />
-      <img src="foto5.jpg" style="animation-delay: 0.8s;" />
-      <img src="foto6.jpg" style="animation-delay: 1s;" />
-      <img src="foto7.jpg" style="animation-delay: 1.2s;" />
-    </div>
-    <button onclick="showFinal()">Lanjut ke Penutup</button>
-  </section>
+  <img src="assets/foto4.jpg" alt="pingu pertama kali" />
+  <p>KALOO INI KETIKA PERTAMA KALI KAMU BELI PINGU</p>
 
-  <!-- Section 3: Final message -->
-  <section id="final" class="hidden">
-    <p class="final-message">
-      Happy birthday sayang kuu!! Wish u all the best!!  
-      Semoga kita selalu bersama ya!! Sampai tua!! 💞💞💞
-    </p>
-  </section>
+  <img src="assets/foto5.jpg" alt="prank" />
+  <p>ketika kamu ngprank aku (tapi aku udh tau si kocak)</p>
 
-  <script>
-    function nextSection() {
-      document.getElementById("greeting").classList.add("hidden");
-      document.getElementById("photos").classList.remove("hidden");
+  <img src="assets/foto6.jpg" alt="baking" />
+  <p>WAKTU KAMU BAKING!!! huwaa i wish i can taste ur cooking</p>
+
+  <img src="assets/foto7.jpg" alt="mabar ml" />
+  <p>Ketika akhirnya kita mabar ml hehe</p>
+</div>
+<button onclick="lanjut('halaman4')">Lanjut ke kata penutup ➜</button>
+
+  </div>  <div class="section hidden" id="halaman4">
+    <h2>Happy Birthday Sayang Kuu 🎂</h2>
+    <p>Wish u all the best!! Semoga kita selalu bersama ya!! Sampai tua!! 💕</p>
+  </div>  <script>
+    function lanjut(idSelanjutnya) {
+      document.querySelectorAll('.section').forEach(el => el.classList.add('hidden'));
+      document.getElementById(idSelanjutnya).classList.remove('hidden');
+
+      if (idSelanjutnya === 'halaman3') {
+        document.querySelectorAll('.kenangan img').forEach((img, i) => {
+          setTimeout(() => img.classList.add('visible'), i * 300);
+        });
+      }
     }
 
-    function showFinal() {
-      document.getElementById("photos").classList.add("hidden");
-      document.getElementById("final").classList.remove("hidden");
+    // Leci jatuh
+    for (let i = 0; i < 30; i++) {
+      const leci = document.createElement('div');
+      leci.classList.add('leci');
+      leci.style.left = Math.random() * 100 + 'vw';
+      leci.style.animationDelay = Math.random() * 5 + 's';
+      leci.style.opacity = 0.7;
+      document.body.appendChild(leci);
     }
-  </script>
-
-</body>
-</html>
+  </script></body>
+      </html>
